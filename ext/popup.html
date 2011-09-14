@@ -1,0 +1,53 @@
+<style>
+body {
+  min-width:235px;
+  overflow-x:hidden;
+}
+
+img {
+  margin:5px;
+  border:1px solid black;
+  vertical-align:middle;
+  width:75px;
+  height:60px;
+}
+body {
+	font-family: helvetica, arial, sans-serif;
+	font-size: 80%;
+}
+
+a {
+	text-decoration: none;
+	color:#696969;
+	display: block;
+}
+
+a:hover {
+	color:#FFFFFF;
+	background:6666FF;
+}
+</style>
+
+<html>
+  <HEAD>
+	  <SCRIPT LANGUAGE="JavaScript" SRC="content_script.js"></SCRIPT>
+  </HEAD>
+	
+	<body onLoad="setSelectedState()">
+		<div id="theaterless">
+			<a href="javascript:setModeFb('theaterless')"><img src="img/theaterless.png" alt="theaterless"/>Theaterless View</a>
+		</div>
+		<div id="theater">
+			<a href="javascript:setModeFb('theater')"><img src="img/theater.png" alt="theater"/>Theater View</a>
+		</div>
+	</body>
+		<script type="text/javascript">
+			 function setSelectedState() {
+			   if (localStorage.myMode == "theaterless") {
+           document.getElementById("theaterless").style.backgroundColor = '#99CCFF';
+			   } else {
+           document.getElementById("theater").style.backgroundColor = '#99CCFF';
+			   }
+			 };
+	  </script>
+</html>
